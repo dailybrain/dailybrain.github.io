@@ -1,0 +1,35 @@
+{
+  "name": "dailybrain-corporate-website",
+  "version": "1.0.0",
+  "description": "DailyBrain Corporate Website",
+  "author": "Vincent Spiewak",
+  "license": "CC BY-NC-ND 2.0",
+  "homepage": "https://dailybrain.fr",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/dailybrain/dailybrain.github.io.git"
+  },
+  "scripts": {
+    "start": "gulp",
+    "dev": "gulp serve",
+    "prod": "cross-env NODE_ENV=prod gulp"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "bootstrap": "^4.5.0",
+    "browser-sync": "^2.26.12",
+    "cross-env": "^7.0.2",
+    "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-file-include": "^2.2.2",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-js-import": "^1.0.6",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2"
+  }
+}
