@@ -12,7 +12,8 @@
   "scripts": {
     "start": "gulp",
     "dev": "gulp serve",
-    "prod": "cross-env NODE_ENV=prod gulp"
+    "prod": "cross-env NODE_ENV=prod gulp",
+    "prod:serve": "python -m http.server --directory docs"
   },
   "dependencies": {},
   "devDependencies": {
