@@ -1,12 +1,46 @@
 @@include('../partials/header.html', {
-  "title": "Home"
+  "title": "DailyBrain - Delivering awesome products"
 })
 
 @@include('../partials/navbar.html', {
   "active": "home"
 })
 
-<div class="jumbotron bg-white text-center justify-content-center align-items-center mb-0">
+<section class="intro overlay overlay-dark overlay-50">
+  
+  <div class="container d-flex flex-column">
+    <div class="row align-items-center justify-content-center min-vh-100">
+      
+      <div class="col-12 mt-auto text-center">
+
+        <!-- Heading -->
+        <div class="lead text-white">
+          Delivering awesome products with<br />
+          <div class="typed-strings">
+            <p>Lean Startup</p>
+            <p>Software Craftsmanship</p>
+            <p>Continuous Delivery</p>
+            <p>DevOps principles</p>
+          </div>
+          <span class="text-success typed"></span>
+        </div>
+
+      </div>
+
+      <!-- Button -->
+      <div class="col-12 text-center">
+        <a href="#skip-intro" class="btn btn-circle page-scroll">
+          <i class="fa fa-angle-double-down animated"></i>
+        </a>
+      </div>
+      
+    </div>
+  </div>
+
+</section>
+
+
+<div id="skip-intro" class="jumbotron bg-light text-center justify-content-center align-items-center mb-0">
   <div class="container">
     <h1 class="display-3">Boilerplate Bootstrap 4+  with Gulp 4 </h1>
     <p class="lead">Basic is a Bootstrap 4+ boilerplate with Gulp4, cross-env, Sass, sourcemaps, concat, CSS & HTML minification, uglify, image optimization, template partials, BrowserSync.</p>
