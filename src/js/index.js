@@ -35,3 +35,41 @@ $(document).ready(function() {
     })
    
 })
+
+
+// enable countUp with data attributes
+$(document).ready(function() {
+    
+    function triggerCountUpAOS() {
+        $(".aos-animate[data-aos-id='countup:in']:not(.counted)").each(function() {
+
+            console.log('not counted')
+            
+            var elem = $(this)
+            var from = elem.data('from') || null
+            var to = elem.data('to') || null
+            var decimals = elem.data('decimals') || null
+            var duration = elem.data('duration') || null
+            var options = elem.data('options') || null
+            var countup = new CountUp(this, from, to, decimals, duration, options)
+            var err = countup.error 
+            
+            if (err) {
+                console.error(err)
+            } else {
+                countup.start()
+                elem.addClass('counted')
+            }
+            
+        })
+    }
+
+    AOS.init()
+
+    triggerCountUpAOS()
+
+    document.addEventListener('aos:in:countup:in', ({ detail }) => {
+        triggerCountUpAOS()        
+    })
+
+})
