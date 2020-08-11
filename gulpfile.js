@@ -4,6 +4,7 @@ const browserSync = require('browser-sync').create()
 const sass = require('gulp-sass')
 const htmlmin = require('gulp-htmlmin')
 const cssmin = require('gulp-cssmin')
+const purgecss = require('gulp-purgecss')
 const uglify = require('gulp-uglify')
 const imagemin = require('gulp-imagemin')
 const concat = require('gulp-concat')
@@ -14,12 +15,12 @@ const clean = require('gulp-clean')
 
 const isProd = process.env.NODE_ENV === 'prod'
 
-const htmlFile = [
+const htmlFiles = [
     'src/pages/**/*.html'
 ]
 
 const html = () => {
-    return gulp.src(htmlFile)
+    return gulp.src(htmlFiles)
         .pipe(fileInclude({
             prefix: '@@',
             basePath: '@file'
@@ -42,6 +43,12 @@ const css = () => {
             includePaths: ['node_modules']
         }).on('error', sass.logError))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
+        .pipe(gulpIf(isProd, purgecss({
+            content: [ 
+                'src/pages/**/*.html', 
+                'src/partials/**/*.html' 
+            ]
+        })))
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('docs/css'))
 }
