@@ -68,8 +68,8 @@ $(document).ready(function() {
 
     triggerCountUpAOS()
 
-    document.addEventListener('aos:in:countup:in', ({ detail }) => {
-        triggerCountUpAOS()        
+    document.addEventListener('aos:in:countup:in', function(detail) {
+        triggerCountUpAOS()
     })
 
 })
