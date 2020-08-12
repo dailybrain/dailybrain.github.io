@@ -19,6 +19,11 @@ const htmlFiles = [
     'src/pages/**/*.html'
 ]
 
+const htmlFilesForPurgeCSS = [ 
+    'src/partials/**/*.html',
+    'src/pages/**/*.html'
+]
+
 const html = () => {
     return gulp.src(htmlFiles)
         .pipe(fileInclude({
@@ -44,10 +49,7 @@ const css = () => {
         }).on('error', sass.logError))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulpIf(isProd, purgecss({
-            content: [ 
-                'src/pages/**/*.html', 
-                'src/partials/**/*.html' 
-            ]
+            content: htmlFilesForPurgeCSS
         })))
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('docs/css'))
