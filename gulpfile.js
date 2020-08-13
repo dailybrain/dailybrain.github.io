@@ -66,7 +66,7 @@ const js = () => {
 }
 
 const img = () => {
-    return gulp.src('src/img/*')
+    return gulp.src('src/img/**')
         .pipe(gulpIf(isProd, imagemin()))
         .pipe(gulp.dest('docs/img'))
 }
