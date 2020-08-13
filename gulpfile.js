@@ -48,9 +48,9 @@ const css = () => {
             includePaths: ['node_modules']
         }).on('error', sass.logError))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
-        .pipe(gulpIf(isProd, purgecss({
+        /*.pipe(gulpIf(isProd, purgecss({
             content: htmlFilesForPurgeCSS
-        })))
+        })))*/
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('docs/css'))
 }
