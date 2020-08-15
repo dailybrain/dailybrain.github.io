@@ -5,9 +5,9 @@ function toggleNavbar(e) {
     if (offset > 1) {
     // prevent iOS scroll bug
     //if (offset != 0) {    
-        $(".navbar-toggleable").removeClass("navbar-dark").addClass("navbar-light bg-white border-bottom")
+        $(".navbar-toggleable").removeClass("navbar-dark").addClass("navbar-light")
     } else {
-        $(".navbar-toggleable").removeClass("navbar-light bg-white border-bottom").addClass("navbar-dark")
+        $(".navbar-toggleable").removeClass("navbar-light").addClass("navbar-dark")
     }
 }
 

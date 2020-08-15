@@ -48,15 +48,17 @@ const css = () => {
             includePaths: ['node_modules']
         }).on('error', sass.logError))
         .pipe(gulpIf(!isProd, sourcemaps.write()))
-        /*.pipe(gulpIf(isProd, purgecss({
-            content: htmlFilesForPurgeCSS
-        })))*/
+        .pipe(gulpIf(isProd, purgecss({
+            content: htmlFilesForPurgeCSS,
+            whitelistPatterns: [/navbar-light$/, /navbar-dark$/, /[data-aos]/],
+            whitelistPatternsChildren: [/navbar-light$/, /navbar-dark$/],
+        })))
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('docs/css'))
 }
 
 const js = () => {
-    return gulp.src('src/js/*.js')
+    return gulp.src(['node_modules/aos/dist/aos.js', 'src/js/*.js'])
         .pipe(jsImport({
             hideConsole: false
         }))
