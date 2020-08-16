@@ -64,7 +64,7 @@ $(document).ready(function() {
         })
     }
 
-    AOS.init()
+    AOS.init({ duration: 700, easing: 'ease-out-quad', once: true, startEvent: 'load' })
 
     triggerCountUpAOS()
 
