@@ -50,8 +50,8 @@ const css = () => {
         .pipe(gulpIf(!isProd, sourcemaps.write()))
         .pipe(gulpIf(isProd, purgecss({
             content: htmlFilesForPurgeCSS,
-            whitelistPatterns: [/navbar-light$/, /navbar-dark$/, /[data-aos]/],
-            whitelistPatternsChildren: [/navbar-light$/, /navbar-dark$/],
+            whitelistPatterns: [/^navbar-light$/, /^navbar-dark$/, /pulse$/],
+            whitelistPatternsChildren: [/^navbar-light$/, /^navbar-dark$/],
         })))
         .pipe(gulpIf(isProd, cssmin()))
         .pipe(gulp.dest('docs/css'))

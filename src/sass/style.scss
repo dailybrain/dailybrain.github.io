@@ -149,11 +149,21 @@ html, body {
 	}
 }
 
+.feather {
+	width: 24px;
+	height: 24px;
+	stroke: currentColor;
+	stroke-width: 2;
+	stroke-linecap: round;
+	stroke-linejoin: round;
+	fill: none;
+}
+
 .btn-circle {
 	width:50px;
 	height:50px;
 	margin-top:15px;
-	line-height:37px;
+	line-height:32px;
 	text-align:center;
 	border:2px solid #fff;
 	border-radius:100%!important;
@@ -172,14 +182,14 @@ html, body {
 	box-shadow: none;
 }
 
-.btn-circle i.animated {
+.btn-circle .animated {
 	-webkit-transition-property:-webkit-transform;
 	-webkit-transition-duration:1s;
 	-moz-transition-property:-moz-transform;
 	-moz-transition-duration:1s;
 }
 
-.btn-circle:hover i.animated {
+.btn-circle:hover .animated {
 	-webkit-animation-name:pulse;
 	-moz-animation-name:pulse;
 	-webkit-animation-duration:1.5s;

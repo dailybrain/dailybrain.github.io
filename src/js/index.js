@@ -42,8 +42,6 @@ $(document).ready(function() {
     
     function triggerCountUpAOS() {
         $(".aos-animate[data-aos-id='countup:in']:not(.counted)").each(function() {
-
-            console.log('not counted')
             
             var elem = $(this)
             var from = elem.data('from') || null
@@ -64,7 +62,7 @@ $(document).ready(function() {
         })
     }
 
-    AOS.init({ duration: 700, easing: 'ease-out-quad', once: true, startEvent: 'load' })
+    AOS.init()
 
     triggerCountUpAOS()
 
