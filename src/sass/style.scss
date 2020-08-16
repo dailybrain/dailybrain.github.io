@@ -3,6 +3,21 @@ $theme-colors: (
     "dark": #000000
 );
 
+// Spacing
+$spacer: 1rem !default;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  // customs...
+  6: $spacer * 6,
+  7: $spacer * 9,
+  8: $spacer * 12,
+) !default;
+
 // This variable affects the `.h-*` and `.w-*` classes.
 $sizes: () !default;
 $sizes: map-merge(
@@ -104,6 +119,10 @@ html, body {
     background-size: cover;
 }
 
+.opacity-80 {
+	opacity: 0.8;
+}
+
 .overlay {
     position: relative;
 }
@@ -136,6 +155,14 @@ html, body {
 
 .overlay-60::before {
     opacity: 0.6;
+}
+
+.overlay-70::before {
+    opacity: .7;
+}
+
+.overlay-80::before {
+    opacity: .8;
 }
 
 .lead {
@@ -265,6 +292,10 @@ html, body {
     object-fit: cover;
 }
 
+.start-with-us {
+    background: url('/img/landing.6.jpg') center no-repeat;
+    background-size: cover;
+}
 
 .dark-footer {
 	background-color: #1b2a4e;
