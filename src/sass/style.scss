@@ -230,23 +230,59 @@ html, body {
 	}
 }
 
-footer {
+.testimonials .row {
+	margin-left: 0px;
+	margin-right: 0px;
+}
+
+.testimonials blockquote p {
+	font-style: italic;
+}
+
+.testimonials blockquote footer::before {
+    content: "";
+}
+
+.testimonials blockquote footer {
+    display: block;
+    font-size: 18px;
+}
+
+.testimonials blockquote footer a {
+	color: #869ab8;
+}
+
+.testimonials blockquote .avatar {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+}
+
+.testimonials blockquote .avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.dark-footer {
 	background-color: #1b2a4e;
 	color: #506690;
 }
 
-footer .footer-brand {
+.dark-footer .footer-brand {
 	filter: brightness(0) invert(1);
 	width: auto;
 	height: 30px;
 }
 
-footer .list-social-icon {
+.dark-footer .list-social-icon {
     width: 20px;
 	height: 20px;
 	color: #869AB8;
 }
 
-footer .text-muted a {
+.dark-footer .text-muted a {
 	color: #869ab8
 }
