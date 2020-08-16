@@ -230,7 +230,13 @@ html, body {
 	}
 }
 
+footer {
+	background-color: #1b2a4e;
+	color: #506690;
+}
+
 footer .footer-brand {
+	filter: brightness(0) invert(1);
 	width: auto;
 	height: 30px;
 }
@@ -238,5 +244,9 @@ footer .footer-brand {
 footer .list-social-icon {
     width: 20px;
 	height: 20px;
-	color: #506690;
+	color: #869AB8;
+}
+
+footer .text-muted a {
+	color: #869ab8
 }
