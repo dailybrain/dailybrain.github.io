@@ -1,7 +1,9 @@
+/*
 $theme-colors: (
     "primary": #ff3a52,
     "dark": #000000
 );
+*/
 
 // Spacing
 $spacer: 1rem !default;
@@ -298,6 +300,11 @@ html, body {
 
 .start-with-us {
     background: url('/img/landings/start-with-us.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.not-found {
+    background: url('/img/landings/not-found.jpg') center no-repeat;
     background-size: cover;
 }
 
