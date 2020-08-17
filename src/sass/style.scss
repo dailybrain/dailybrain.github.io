@@ -41,6 +41,10 @@ html, body {
 	overflow-x: hidden;
 }
 
+.text-gray-600 {
+    color: #869ab8;
+}
+
 .navbar {
     font-size: 17px;
     font-weight: 600;
@@ -257,6 +261,25 @@ html, body {
 			-moz-transform:scale(1);
 			transform:scale(1);
 	}
+}
+
+.customers {
+	background-color: #f9fbfd;
+}
+
+.customers img {
+	max-width: inherit;
+	//filter: grayscale(1);
+	//filter: contrast(0) sepia(100%) hue-rotate(160deg) brightness(1.4) saturate(0.28);
+}
+
+.customers img:hover {
+	max-width: inherit;
+	filter: none;
+}
+
+.testimonials {
+	background-color: #f9fbfd;
 }
 
 .testimonials .row {
