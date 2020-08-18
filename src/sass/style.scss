@@ -41,8 +41,19 @@ html, body {
 	overflow-x: hidden;
 }
 
-.text-gray-600 {
-    color: #869ab8;
+/*
+.display-2 {
+	font-size: 40px;
+}
+
+.display-4 {
+	font-size: 50px;
+}
+*/
+
+.text-muted {
+	font-size: 21px;
+	color: #869ab8 !important;
 }
 
 .navbar {
@@ -123,6 +134,14 @@ html, body {
 .intro {
     background: url('/img/landings/intro.jpg') center no-repeat;
     background-size: cover;
+}
+
+.vanity-metrics {
+	background-color: #f9fbfd;
+}
+
+.vanity-metrics h2 {
+    color: #6c8aec;
 }
 
 .opacity-80 {
@@ -307,8 +326,8 @@ html, body {
 .testimonials blockquote .avatar {
     position: relative;
     display: inline-block;
-    width: 45px;
-    height: 45px;
+    width: 60px;
+    height: 60px;
 }
 
 .testimonials blockquote .avatar-img {
@@ -317,9 +336,9 @@ html, body {
     object-fit: cover;
 }
 
-.testimonials blockquote .person {
+/*.testimonials blockquote .person {
 	font-size: 0.75rem;
-}
+}*/
 
 .start-with-us {
     background: url('/img/landings/start-with-us.jpg') center no-repeat;
