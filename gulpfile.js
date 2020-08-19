@@ -41,6 +41,11 @@ const rawPages = () => {
         .pipe(gulp.dest('docs'))
 }
 
+const staticFiles = () => {
+    return gulp.src(['src/CNAME', 'src/keybase.txt'])
+        .pipe(gulp.dest('docs'))
+}
+
 const css = () => {
     return gulp.src('src/sass/style.scss')
         .pipe(gulpIf(!isProd, sourcemaps.init()))
@@ -103,5 +108,5 @@ exports.css = css
 exports.html = html
 exports.js = js
 exports.del = del
-exports.serve = gulp.parallel(html, rawPages, css, js, img, watchFiles, serve)
-exports.default = gulp.series(del, html, rawPages, css, js, img)
+exports.serve = gulp.parallel(staticFiles, html, rawPages, css, js, img, watchFiles, serve)
+exports.default = gulp.series(del, staticFiles, html, rawPages, css, js, img)
