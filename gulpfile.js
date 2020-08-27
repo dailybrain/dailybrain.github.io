@@ -46,6 +46,11 @@ const staticFiles = () => {
         .pipe(gulp.dest('docs'))
 }
 
+const favicons = () => {
+    return gulp.src('src/favicons/*')
+        .pipe(gulp.dest('docs'))
+}
+
 const css = () => {
     return gulp.src('src/sass/style.scss')
         .pipe(gulpIf(!isProd, sourcemaps.init()))
@@ -108,5 +113,5 @@ exports.css = css
 exports.html = html
 exports.js = js
 exports.del = del
-exports.serve = gulp.parallel(staticFiles, html, rawPages, css, js, img, watchFiles, serve)
-exports.default = gulp.series(del, staticFiles, html, rawPages, css, js, img)
+exports.serve = gulp.parallel(staticFiles, favicons, html, rawPages, css, js, img, watchFiles, serve)
+exports.default = gulp.series(del, staticFiles, favicons, html, rawPages, css, js, img)
