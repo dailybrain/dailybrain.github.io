@@ -77,6 +77,11 @@ const js = () => {
         .pipe(gulp.dest('docs/js'))
 }
 
+const deviceMockups = () => {
+    return gulp.src('node_modules/html5-device-mockups/device-mockups/**/*')
+        .pipe(gulp.dest('docs/device-mockups'))
+}
+
 const img = () => {
     return gulp.src('src/img/**')
         .pipe(gulpIf(isProd, imagemin()))
@@ -113,5 +118,5 @@ exports.css = css
 exports.html = html
 exports.js = js
 exports.del = del
-exports.serve = gulp.parallel(staticFiles, favicons, html, rawPages, css, js, img, watchFiles, serve)
-exports.default = gulp.series(del, staticFiles, favicons, html, rawPages, css, js, img)
+exports.serve = gulp.parallel(staticFiles, favicons, html, rawPages, css, js, img, deviceMockups, watchFiles, serve)
+exports.default = gulp.series(del, staticFiles, favicons, html, rawPages, css, js, img, deviceMockups)

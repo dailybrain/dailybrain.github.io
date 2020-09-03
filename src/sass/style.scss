@@ -35,21 +35,16 @@ $sizes: map-merge(
 );
 
 @import 'node_modules/aos/src/sass/aos.scss';
+@import 'node_modules/html5-device-mockups/dist/device-mockups.min';
 @import "node_modules/bootstrap/scss/bootstrap";
 
 html, body {
 	overflow-x: hidden;
 }
 
-/*
-.display-2 {
-	font-size: 40px;
+.navbar-spacer {
+	padding-top: 89px;
 }
-
-.display-4 {
-	font-size: 50px;
-}
-*/
 
 .text-muted {
 	font-size: 21px;
@@ -305,8 +300,6 @@ html, body {
 
 .customers img {
 	max-width: inherit;
-	//filter: grayscale(1);
-	//filter: contrast(0) sepia(100%) hue-rotate(160deg) brightness(1.4) saturate(0.28);
 }
 
 .customers img:hover {
@@ -353,18 +346,74 @@ html, body {
     object-fit: cover;
 }
 
-/*.testimonials blockquote .person {
-	font-size: 0.75rem;
-}*/
-
 .start-with-us {
     background: url('/img/landings/start-with-us.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.start-with-us.kamet {
+    background: url('/img/achievements/kamet/footer-cover.jpg') center no-repeat;
+    background-size: cover;
+}
+
+.start-with-us.sacem {
+    background: url('/img/achievements/sacem/footer-cover.jpg') center no-repeat;
     background-size: cover;
 }
 
 .not-found {
     background: url('/img/landings/not-found.jpg') center no-repeat;
     background-size: cover;
+}
+
+.success-stories .row .col {
+	padding: 5px;
+}
+
+.success-stories .card .card-header {
+	position: absolute; 
+	top: 0; 
+	left: 0;
+	padding: 0;
+	border: 0;
+	background-color: transparent;
+}
+
+.success-stories .card .card-title {
+	padding-top: 50px;
+}
+
+.success-stories .card:hover:before {
+	opacity: 0.25;
+}
+
+.technologies img {
+	max-width: inherit;
+}
+
+.badge-rounded-circle {
+	height: 35px;
+	width: 35px;
+	border-radius: 20px;
+}
+
+.badge-rounded-circle svg {
+	width: 20px;
+	margin-top: 2px;
+}
+
+.key-points p {
+	display: inline-block;
+	margin-top: 5px;
+}
+
+.key-points {
+	margin-bottom: 30px;
+}
+
+.badge-success-soft {
+    background-color:rgba(66,186,150,.1);
+    color: #42ba96;
 }
 
 .contact .img-cover {
@@ -400,6 +449,7 @@ html, body {
 .dark-footer {
 	background-color: #1b2a4e;
 	color: #506690;
+	border-top: 1px solid white;
 }
 
 .dark-footer .footer-brand {
