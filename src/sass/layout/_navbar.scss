@@ -1,0 +1,120 @@
+.navbar {
+    
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 0;
+    transition: all 0.4s ease-in-out;
+    transition-property: background-color, color;
+
+    .navbar-brand {
+
+        display: inline-block;
+        padding: 0;
+    
+        img {
+        
+            position: relative;
+            top: 1px;
+            width: auto;
+            height: 38px;
+        
+        }
+    
+    }
+    
+    .navbar-toggler {
+        
+        border: none;
+        outline:0;
+        box-shadow: none;
+    
+    }
+    
+}
+
+.navbar-dark {
+
+    .navbar-brand {
+
+        color: #fff;
+        filter: brightness(0) invert(1);
+
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+    }
+
+    .navbar-nav {
+
+        .nav-item {
+
+            .nav-link {
+                color: rgba(255, 255, 255, 0.6);
+                //color: rgba(255, 255, 255, 0.9);
+            }
+
+            .nav-link:hover, .nav-link:focus {
+                color: rgba(255, 255, 255, 0.9);
+                //color: rgba(108, 138, 236, 1);
+            }
+
+        }
+
+        .nav-item.active {
+            .nav-link {
+                color: rgba(255, 255, 255, 0.9);
+                //color: rgba(255, 255, 255, 0.6);
+            }
+        }
+
+    }
+}
+
+.navbar-dark.fixed-top > .container {
+    
+    position: relative;
+  
+    &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -12px;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+}
+
+.navbar-light {
+
+	background-color: #fff;
+    border-bottom: 1px solid #dee2e6;
+    
+    .navbar-nav {
+    
+        .nav-item {
+            .nav-link {
+                color: rgba(0, 0, 0, 0.6);
+                //color: rgba(0, 0, 0, 0.8);
+            }
+            .nav-link:hover, .nav-link:focus {
+                color: rgba(0, 0, 0, 0.9);
+                //color: rgba(108, 138, 236, 1);
+            }
+        }
+
+        .nav-item.active { 
+            .nav-link {
+                color: rgba(0, 0, 0, 0.9);
+                //color: rgba(0, 0, 0, 0.6);
+            }
+        }
+        
+    }
+    
+}
+
+.navbar-spacer {
+	padding-top: 63px;
+}

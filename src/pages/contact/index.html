@@ -1,75 +1,25 @@
 @@include('../../partials/header.html', {
-  "title": "DailyBrain - Contact Us",
-  "description": "Let's make a new sucess story together",
-  "url": "https://dailybrain.fr/contact"
+    "url": "https://dailybrain.fr/contact",
+    "title": "DailyBrain | Contact us",
+    "description": "Delivering awesome products with Lean Startup, Software Craftsmanship, Continuous Delivery &amp; DevOps principles.",
+    "keywords": "agile,lean startup,devops,continuous delivery,big data,machine learning,cloud,agile software development,coach,tdd,software craftsmanship,paris,remote,vincent spiewak",
+    "opengraph" : {
+        "image": {
+            "url": "https://dailybrain.fr/img/logos/dailybrain.png",
+            "type": "image/png",
+            "width": 1000,
+            "height": 1000
+        }
+    }
 })
 
-@@include('../../partials/fb-chat.html')
+@@include('../../partials/facebook-chat.html')
 
 @@include('../../partials/navbar.html', {
-  "navbarClasses": "navbar-light",
-  "active": "contact"
+    "navbarClasses": "navbar-light",
+    "active": "contact"
 })
 
-<section class="contact">
-      
-  <!-- Content -->
-  <div class="container d-flex flex-column">
-    <div class="row align-items-center justify-content-between no-gutters min-vh-100">
-      <div class="col-12 col-md-5 align-self-stretch">
-
-        <!-- Image (mobile) -->
-        <img src="/img/landings/contact-us-mobile.jpg" class="d-md-none img-cover" alt="...">
-
-        <!-- Image -->
-        <div class="d-none d-md-block vw-50 h-100 float-right bg-cover" style="background-image: url('/img/landings/contact-us.jpg');"></div>
-
-      </div>
-      <div class="col-12 col-md-6 py-5">
-        
-        <!-- Heading -->
-        <h1 class="font-weight-bold text-center mb-2">
-          Let's make a new sucess story together
-        </h1>
-
-        <!-- Text -->
-        <p class="font-size-lg text-center text-muted mb-0">
-          We will be delighted to help you for your next product
-        </p>
-
-        <!-- Divider -->
-        <hr class="hr-sm my-5">
-
-        <div class="text-center">
-          <h2 class="text-uppercase mb-1">
-            Message us
-          </h2>
-  
-          <div class="mb-5 mb-md-0">
-            <a onclick="FB.CustomerChat.showDialog();" class="h4 text-primary">
-              Start a chat!
-            </a>
-          </div>
-        </div>
-
-        <!-- Divider -->
-        <hr class="hr-sm my-5">
-
-        <div class="text-center">
-          <h2 class="text-uppercase mb-1">
-            Email us
-          </h2>
-  
-          <div class="mb-5 mb-md-0">
-            <a href="mailto:hi@dailybrain.fr" class="h4 text-primary">
-              hi@dailybrain.fr
-            </a>
-          </div>
-        </div>
-
-      </div>
-    </div> <!-- / .row -->
-  </div>
-</section>
+@@include('../../partials/sections/contact.html')
 
 @@include('../../partials/footer.html')

@@ -1,0 +1,23 @@
+<section class="portfolio-technologies py-4 bg-light">
+    <div class="container" data-aos="flip-up">
+        <div class="row">
+
+            @@for (var i = 0; i < technologies.length; i++) {
+                <div class="col-6 col-sm-4 col-lg-2 p-0">
+
+                    <!-- Brand -->
+                    <div class="my-4 my-md-3 my-lg-2 text-center">
+                        <img 
+                            src="`+technologies[i].src+`" 
+                            alt="`+technologies[i].alt+`" 
+                            width="`+technologies[i].width+`"
+                            height="`+technologies[i].height+`"
+                            />
+                    </div>
+
+                </div>
+            }
+
+        </div> <!-- / .row -->
+    </div> <!-- / .container -->
+</section>

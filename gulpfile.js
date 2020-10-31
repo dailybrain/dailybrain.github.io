@@ -1,96 +1,183 @@
 const gulp = require('gulp')
 const gulpIf = require('gulp-if')
-const browserSync = require('browser-sync').create()
-const sass = require('gulp-sass')
+const clean = require('gulp-clean')
+const fileInclude = require('gulp-file-include')
+
 const htmlmin = require('gulp-htmlmin')
+const sass = require('gulp-sass')
 const cssmin = require('gulp-cssmin')
 const purgecss = require('gulp-purgecss')
-const uglify = require('gulp-uglify')
-const imagemin = require('gulp-imagemin')
-const concat = require('gulp-concat')
-const jsImport = require('gulp-js-import')
+const autoprefixer = require('gulp-autoprefixer')
+
+const rollup = require('gulp-better-rollup')
 const sourcemaps = require('gulp-sourcemaps')
-const fileInclude = require('gulp-file-include')
-const clean = require('gulp-clean')
+const babel = require('rollup-plugin-babel')
+const resolve = require('rollup-plugin-node-resolve')
+const commonjs = require('rollup-plugin-commonjs')
+const terser = require('rollup-plugin-terser').terser
+
+const responsive = require('gulp-responsive')
+
+const browserSync = require('browser-sync').create()
 
 const isProd = process.env.NODE_ENV === 'prod'
 
-const htmlFiles = [
-    'src/pages/**/*.html'
-]
-
-const htmlFilesForPurgeCSS = [ 
-    'src/partials/**/*.html',
-    'src/pages/**/*.html'
-]
-
 const html = () => {
-    return gulp.src(htmlFiles)
-        .pipe(fileInclude({
-            prefix: '@@',
-            basePath: '@file'
-        }))
-        .pipe(gulpIf(isProd, htmlmin({
-            collapseWhitespace: true
-        })))
-        .pipe(gulp.dest('docs'))
+    return gulp
+    .src(['src/pages/**/*.html'])
+    .pipe(fileInclude({
+        prefix: '@@',
+        basePath: '@file'
+    }))
+    .pipe(gulpIf(isProd, htmlmin({
+        collapseWhitespace: true
+    })))
+    .pipe(gulp.dest('docs'))
 }
 
-const rawPages = () => {
-    return gulp.src('src/pages-raw/**/*')
-        .pipe(gulp.dest('docs'))
+const assets = () => {
+    return gulp
+    .src(['src/assets/**/*', 'src/favicons/*'])
+    .pipe(gulp.dest('docs'))
 }
 
-const staticFiles = () => {
-    return gulp.src(['src/CNAME', 'src/keybase.txt'])
-        .pipe(gulp.dest('docs'))
+const jpg = () => {
+    return gulp
+    .src('src/img/**/*.jpg')
+    .pipe(
+        responsive(
+            {
+                '**/*.jpg': [
+                    {
+
+                    }
+                ],
+                'landings/*.jpg': [
+                    {
+                        width: 600,
+                        rename: { suffix: '-600px' }               
+                    },
+                    {
+                        width: 800,
+                        rename: { suffix: '-800px' }                
+                    },
+                    {
+                        width: 1000,
+                        rename: { suffix: '-1000px' }               
+                    },
+                    {
+                        width: 1200,
+                        rename: { suffix: '-1200px' }               
+                    },
+                    {
+                        width: 1400,
+                        rename: { suffix: '-1400px' }               
+                    },
+                    {
+                        width: 1920,
+                        rename: { suffix: '-1920px' }               
+                    }
+                ],
+                'testimonials/*.jpg': [
+                    {
+                        width: 60
+                    }
+                ]
+            },
+            // default settings for all
+            {
+                quality: 85,
+                progressive: true,
+                withMetadata: false
+            }
+        )
+    )
+    .pipe(gulp.dest('docs/img'))
 }
 
-const favicons = () => {
-    return gulp.src('src/favicons/*')
-        .pipe(gulp.dest('docs'))
+const png = () => {
+    return gulp
+    .src('src/img/**/*.png')
+    .pipe(gulp.dest('docs/img'))
+}
+
+const svg = () => {
+    return gulp
+    .src('src/img/**/*.svg')
+    .pipe(gulp.dest('docs/img'))
+}
+
+const images = async () => {
+    return await [
+        jpg(), 
+        png(), 
+        svg()
+    ]
 }
 
 const css = () => {
-    return gulp.src('src/sass/style.scss')
-        .pipe(gulpIf(!isProd, sourcemaps.init()))
-        .pipe(sass({
-            includePaths: ['node_modules']
-        }).on('error', sass.logError))
-        .pipe(gulpIf(!isProd, sourcemaps.write()))
-        .pipe(gulpIf(isProd, purgecss({
-            content: htmlFilesForPurgeCSS,
-            whitelistPatterns: [/^navbar-light$/, /^navbar-dark$/, /pulse$/],
-            whitelistPatternsChildren: [/^navbar-light$/, /^navbar-dark$/],
-        })))
-        .pipe(gulpIf(isProd, cssmin()))
-        .pipe(gulp.dest('docs/css'))
+    return gulp
+    .src('src/sass/*.scss')
+    .pipe(gulpIf(!isProd, sourcemaps.init()))
+    .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
+    .pipe(gulpIf(!isProd, sourcemaps.write('')))
+    .pipe(gulpIf(isProd, purgecss({
+        content: [ 
+            'src/partials/**/*.html',
+            'src/pages/**/*.html'
+        ],
+        safelist: {
+            standard: [
+                'navbar-dark', 
+                'navbar-light',
+                'pulse'
+            ],
+            deep: [/^carousel/,/^aos/,/^data-aos/]
+        },
+    })))
+    .pipe(gulpIf(isProd, cssmin()))
+    .pipe(gulp.dest('docs/css'))
 }
 
 const js = () => {
-    return gulp.src(['node_modules/aos/dist/aos.js', 'src/js/*.js'])
-        .pipe(jsImport({
-            hideConsole: false
-        }))
-        .pipe(concat('all.js'))
-        .pipe(gulpIf(isProd, uglify()))
-        .pipe(gulp.dest('docs/js'))
+    return gulp
+    .src('src/js/*.js')
+    .pipe(gulpIf(!isProd, sourcemaps.init()))
+    .pipe(gulpIf(!isProd, rollup({ plugins: [babel(), resolve(), commonjs()] }, 'umd')))
+    .pipe(gulpIf(isProd, rollup({ 
+        plugins: [
+            babel(), 
+            resolve(), 
+            commonjs(), 
+            terser(                  
+                    {
+                        format: {
+                            comments: false
+                        },
+                        compress: {
+                            drop_console: true 
+                        }
+                    }
+                )
+            ] 
+        }, 
+        'umd'
+        )
+    ))
+    .pipe(gulpIf(!isProd, sourcemaps.write('')))
+    .pipe(gulp.dest('docs/js'))
 }
 
-const deviceMockups = () => {
-    return gulp.src('node_modules/html5-device-mockups/device-mockups/**/*')
-        .pipe(gulp.dest('docs/device-mockups'))
-}
-
-const img = () => {
-    return gulp.src('src/img/**')
-        .pipe(gulpIf(isProd, imagemin()))
-        .pipe(gulp.dest('docs/img'))
+const del = () => {
+    return gulp
+    .src('docs/*', { read: false })
+    .pipe(clean())
 }
 
 const serve = () => {
     browserSync.init({
-        open: true,
+        open: false,
         server: './docs'
     })
 }
@@ -100,23 +187,17 @@ const browserSyncReload = (done) => {
     done()
 }
 
-
 const watchFiles = () => {
     gulp.watch('src/**/*.html', gulp.series(html, browserSyncReload))
     gulp.watch('src/**/*.scss', gulp.series(css, browserSyncReload))
     gulp.watch('src/**/*.js', gulp.series(js, browserSyncReload))
-    gulp.watch('src/img/**/*.*', gulp.series(img))
+    gulp.watch('src/img/**/*.*', gulp.series(images))
     return
 }
 
-const del = () => {
-    return gulp.src('docs/*', { read: false })
-        .pipe(clean())
-}
-
-exports.css = css
 exports.html = html
+exports.css = css
 exports.js = js
 exports.del = del
-exports.serve = gulp.parallel(staticFiles, favicons, html, rawPages, css, js, img, deviceMockups, watchFiles, serve)
-exports.default = gulp.series(del, staticFiles, favicons, html, rawPages, css, js, img, deviceMockups)
+exports.serve = gulp.parallel(html, assets, images, css, js, watchFiles, serve)
+exports.default = gulp.series(del, html, assets, images, css, js)

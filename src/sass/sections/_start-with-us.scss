@@ -1,0 +1,17 @@
+.start-with-us {
+	
+	background-position: center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	@include background-image-urls('/img/landings/start-with-us.jpg');
+
+	&.sacem {
+		@include background-image-urls('/img/landings/start-with-us-sacem.jpg');
+	}
+
+	&.kamet {
+		@include background-image-urls('/img/landings/start-with-us-kamet.jpg');
+	}
+
+}

@@ -1,0 +1,33 @@
+.btn-circle {
+
+	width:50px;
+	height:50px;
+	margin-top:15px;
+	line-height:32px;
+	text-align:center;
+	border:2px solid #fff;
+	border-radius:100%!important;
+	font-size:22px;
+	color:#fff;
+	background:0 0;
+	transition: background .3s ease-in-out;
+
+	&:hover, &:focus, &:active, &:visited {
+		outline:0;
+		color:#fff;
+		background:rgba(255,255,255,.1);
+		box-shadow: none;
+	}
+
+	svg.animated {
+		transition-duration:1s;
+	}
+
+	&:hover svg.animated {
+		animation-name:pulse;
+		animation-duration:1.5s;
+		animation-iteration-count:infinite;
+		animation-timing-function:linear;
+	}
+
+}

@@ -1,0 +1,9 @@
+.not-found {
+	
+	background-position: center; 
+	background-repeat: no-repeat;
+	background-size: cover;
+	
+	@include background-image-urls('/img/landings/not-found.jpg');
+
+}

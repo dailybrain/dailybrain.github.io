@@ -1,0 +1,47 @@
+.overlay {
+    
+    position: relative;
+    
+    > .container {
+		position: relative;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        border-radius: inherit;
+    }
+
+}
+
+.overlay-black::before {
+    background-color: #161c2d;
+}
+
+.overlay-dark::before {
+    background-color: #1b2a4e;
+}
+
+.overlay-40::before {
+    opacity: 0.4;
+}
+
+.overlay-50::before {
+    opacity: 0.5;
+}
+
+.overlay-60::before {
+    opacity: 0.6;
+}
+
+.overlay-70::before {
+    opacity: .7;
+}
+
+.overlay-80::before {
+    opacity: .8;
+}

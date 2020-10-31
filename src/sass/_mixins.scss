@@ -1,0 +1,20 @@
+@mixin background-image-urls($src) {
+	@media (max-width: 600px) {
+		background-image: url(str-insert($src, "-600px", -5));
+	}
+	@media (min-width: 601px) and (max-width: 800px) {
+		background-image: url(str-insert($src, "-800px", -5));
+	}
+	@media (min-width: 801px) and (max-width: 1000px) {
+		background-image: url(str-insert($src, "-1000px", -5));
+	}
+	@media (min-width: 1001px) and (max-width: 1200px) {
+		background-image: url(str-insert($src, "-1200px", -5));
+	}
+	@media (min-width: 1201px) and (max-width: 1400px) {
+		background-image: url(str-insert($src, "-1400px", -5));
+	}
+	@media (min-width: 1401px) {
+		background-image: url(str-insert($src, "-1920px", -5));
+	}
+}

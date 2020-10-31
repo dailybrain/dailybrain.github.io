@@ -1,0 +1,30 @@
+.contact .img-cover {
+    width: 100vw;
+    height: auto;
+    margin-left: calc(50% - 50vw);
+}
+
+.contact .bg-cover {
+    background: no-repeat center center/cover;
+}
+
+.contact .vw-50 {
+    width: 50vw!important;
+}
+
+.contact h2 {
+	font-size: 16px;
+    color: #506690!important;
+}
+
+.contact a {
+	font-size: 17px;
+    color:rgba(108, 138, 236, 1) !important;
+    text-decoration: none;
+}
+
+.contact .hr-sm {
+    width: 60px;
+	border-top-width: 2px;
+	border-color: #d9e2ef;
+}

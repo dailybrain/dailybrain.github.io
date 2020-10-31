@@ -1,0 +1,34 @@
+.portfolio {
+ 
+    .card {
+        
+        &:hover:before {
+            opacity: 0.45;
+        }
+
+        .card-header {
+            position: absolute;
+            top: 0;
+            left: 0;
+            border: 0;
+            background-color: transparent;
+        }
+        
+    }
+
+}
+
+.portfolio-highlights {
+
+    .key-points p {
+        display: inline-block;
+        margin-top: 5px;
+    }
+    
+}
+
+.portfolio-technologies {
+    img {
+        max-width: inherit;     
+    }
+}

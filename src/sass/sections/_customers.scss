@@ -1,0 +1,57 @@
+.customers {
+
+    .carousel-control-prev, 
+    .carousel-control-next {
+        color: #000;
+        width: 30px;
+    }
+
+    // sm
+    &.d-block.d-md-none {
+        .carousel-inner {
+            .row {
+                height: 50px;
+                img {
+                    width: 110px;
+                }
+            }
+        }
+        .carousel-control-prev {
+            padding-right: 8px;
+        }
+        .carousel-control-next {
+            padding-left: 8px;
+        }
+    }
+
+    // md
+    &.d-md-block {
+        .carousel-inner {
+            padding: 0 40px;
+            .row {
+                height: 60px;
+                img {
+                    width: 125px;
+                }
+            }
+        }
+    }
+
+    // xl
+    &.d-xl-block {
+        .carousel-inner {
+            padding: 0 30px;
+            .row {
+                height: 75px;
+                .col-2 {
+                    margin: 0 15px;
+                }
+
+                img {
+                    width: 160px;
+                }
+            }
+        }
+    }
+
+}

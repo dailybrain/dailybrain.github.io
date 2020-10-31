@@ -1,0 +1,95 @@
+@@include('../../../partials/header.html', {
+    "url": "https://dailybrain.fr/portfolio/sacem",
+    "title": "DailyBrain | Portfolio | Sacem",
+    "description": "Online music copyright management platform. Real time search &amp; analytics into 10+ Billions of records.",
+    "keywords": "sacem,big data,spring framework,kafka,spark,elastic,react,openstack,infrastructure,gocd,vincent spiewak",
+    "opengraph" : {
+        "image": {
+            "url": "/img/portfolio/sacem/search.jpg",
+            "type": "image/jpeg",
+            "width": 1920,
+            "height": 1080
+        }
+    }
+})
+
+@@include('../../../partials/navbar.html', {
+    "navbarClasses": "navbar-light",
+    "active": "sacem"
+})
+
+@@include('../../../partials/navbar-spacer.html')
+
+@@include('../../../partials/sections/portfolio/brand.html', {
+    "img": {
+        "src": "/img/portfolio/sacem/logo.png",
+        "alt": "Sacem",
+        "width": 139,
+        "height": 60
+    }
+})
+
+@@include('../../../partials/sections/portfolio/header.html', {
+    "title": "Online music copyright management platform",
+    "subtitle": "Real time search &amp; analytics into 10+ Billions of records."
+})
+
+@@include('../../../partials/sections/portfolio/highlights.html', {
+    "screenshot": {
+        "src": "/img/portfolio/sacem/search.jpg",
+        "alt": "Dashboard"
+    },
+    "keypoints": [
+        "Big Data platform using Spring, Kafka &amp; Spark",
+        "Elastic cluster with 10+ Billions of documents",
+        "UI using React & Material Design",
+        "Immutable infrastructure on OpenStack"
+    ]
+})
+
+@@include('../../../partials/sections/portfolio/technologies.html', {
+    "technologies": [
+        {
+            "src": "/img/technologies/openstack.png",
+            "alt": "OpenStack",
+            "width": 112,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/kafka.png",
+            "alt": "Kafka",
+            "width": 118,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/spark.png",
+            "alt": "Spark",
+            "width": 104,
+            "height": 54
+        },        
+        {
+            "src": "/img/technologies/elastic.png",
+            "alt": "Elastic",
+            "width": 112,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/react.png",
+            "alt": "React",
+            "width": 128,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/gocd.png",
+            "alt": "Go CD",
+            "width": 108,
+            "height": 54
+        }                                
+    ]
+})
+
+@@include('../../../partials/sections/start-with-us.html', {
+    "addClasses": "sacem"
+})
+
+@@include('../../../partials/footer.html')

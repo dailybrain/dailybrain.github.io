@@ -1,0 +1,54 @@
+.testimonials {
+
+    .carousel {
+    
+        .carousel-indicators {
+            li {
+    
+                width: 6px;
+                height: 6px;
+                border-radius: 50%;
+                background-color: black;
+                border: 3px solid transparent;
+    
+                &.active {
+                    background-color: transparent;
+                    border: 3px solid black;
+                }
+            }
+    
+        }
+
+        .carousel-item {
+        
+            @media (max-width: 768px) {
+                min-height: 460px;
+            }
+    
+            @media (min-width: 768px) {
+                min-height: 305px;
+            }
+        
+            @media (min-width: 1024px) {
+                min-height: 280px;
+            }
+        
+            @media (min-width: 1280px) {
+                min-height: 255px;
+            }
+    
+            .avatar {
+                img { 
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
+    
+        }        
+    
+    }
+
+}
+
+

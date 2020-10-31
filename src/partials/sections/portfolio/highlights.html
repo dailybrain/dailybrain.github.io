@@ -1,0 +1,38 @@
+<section class="portfolio-highlights py-5 border-bottom">
+    <div class="container"> 
+        <div class="row d-flex">
+
+            <div class="col-12 col-md-5 col-lg-6 col-xl-7 order-md-2 my-auto" data-aos="fade-left">
+        
+                <div class="device-laptop mb-5 mb-md-0">
+                    <img src="@@screenshot.src" alt="@@screenshot.alt" class="screen"> 
+                    <img src="/img/devices/laptop.svg" alt="laptop-frame" class="img-fluid">
+                </div>
+
+            </div>
+
+            <div class="col-12 col-md-7 col-lg-6 col-xl-5 align-self-center order-md-1" data-aos="fade-right">
+        
+                @@for (var i = 0; i < keypoints.length; i++) {
+                    <div class="ml-2 ml-xl-5 key-points d-flex">
+                        
+                        <!-- Check -->
+                        <p class="mr-3 mb-4 d-flex align-self-center">
+                            <svg class="feather check-circle">
+                                <use xlink:href="/img/sprites/feather-sprite.svg#check-circle"/>
+                            </svg>
+                        </p>
+            
+                        <!-- Text -->
+                        <p class="mb-4 text-success">
+                            `+keypoints[i]+`
+                        </p>
+                            
+                    </div>                    
+                }
+            </div>
+
+        </div>
+    </div>
+
+</section>
