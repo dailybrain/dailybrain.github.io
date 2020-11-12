@@ -133,7 +133,7 @@ const css = () => {
                 'navbar-light',
                 'pulse'
             ],
-            deep: [/^carousel/,/^aos/,/^data-aos/]
+            deep: [/^carousel/,/^aos/,/^data-aos/,/^btn-scroll-top/]
         },
     })))
     .pipe(gulpIf(isProd, cssmin()))
