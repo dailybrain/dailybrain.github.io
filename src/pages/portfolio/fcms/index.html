@@ -1,0 +1,95 @@
+@@include('../../../partials/header.html', {
+    "url": "https://dailybrain.fr/portfolio/fcms",
+    "title": "DailyBrain | Portfolio | Figaro Classifieds",
+    "description": "Real time analytics platform",
+    "keywords": "figaro classifieds,real time,analytics,data platform,customer data platform,cdp,golang,kubernetes,google cloud,gcp,elatic,scala,airflow,vincent spiewak",
+    "opengraph" : {
+        "image": {
+            "url": "https://dailybrain.fr/img/portfolio/covers/fcms.jpg",
+            "type": "image/jpeg",
+            "width": 670,
+            "height": 512
+        }
+    }
+})
+
+@@include('../../../partials/navbar.html', {
+    "navbarClasses": "navbar-light",
+    "active": "fcms"
+})
+
+@@include('../../../partials/navbar-spacer.html')
+
+@@include('../../../partials/sections/portfolio/brand.html', {
+    "img": {
+        "src": "/img/portfolio/fcms/logo.png",
+        "alt": "Figaro Classifieds",
+        "width": 169,
+        "height": 60
+    }
+})
+
+@@include('../../../partials/sections/portfolio/header.html', {
+    "title": "Real time analytics platform",
+    "subtitle": "collect, explore and analyze billions of business events"
+})
+
+@@include('../../../partials/sections/portfolio/highlights-phone.html', {
+    "screenshot": {
+        "src": "/img/portfolio/fcms/dataflow.jpg",
+        "alt": "Event Model Canvas"
+    },
+    "keypoints": [
+        "Stream or replay billions of events in hours",
+        "Cloud Native Data platform on GCP",
+        "Data pipelines using Apache Beam &amp; SCIO",
+        "Lightspeed APIs using Golang on Kubernetes"
+    ]
+})
+
+@@include('../../../partials/sections/portfolio/technologies.html', {
+    "technologies": [
+        {
+            "src": "/img/technologies/golang.png",
+            "alt": "Golang",
+            "width": 143,
+            "height": 54
+        },    
+        {
+            "src": "/img/technologies/gcp.png",
+            "alt": "Google Cloud Platform",
+            "width": 67,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/kubernetes.png",
+            "alt": "Kubernetes",
+            "width": 55,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/scala.png",
+            "alt": "Scala",
+            "width": 135,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/elastic.png",
+            "alt": "Elastic",
+            "width": 112,
+            "height": 54
+        },
+        {
+            "src": "/img/technologies/airflow.png",
+            "alt": "Apache Airflow",
+            "width": 139,
+            "height": 54
+        }                                
+    ]
+})
+
+@@include('../../../partials/sections/start-with-us.html', {
+    "addClasses": "fcms"
+})
+
+@@include('../../../partials/footer.html')

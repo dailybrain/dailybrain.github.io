@@ -14,4 +14,12 @@
 		@include background-image-urls('/img/landings/start-with-us-kamet.jpg');
 	}
 
+	&.fcms {
+		@include background-image-urls('/img/landings/start-with-us-fcms.jpg');
+	}
+
+	&.cvaden {
+		@include background-image-urls('/img/landings/start-with-us-cvaden.jpg');
+	}
+
 }

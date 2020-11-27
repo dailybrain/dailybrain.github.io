@@ -18,4 +18,29 @@
 		border-radius: 4.5% 4.5% 0 0;
 		background-color: black;
 	}
+
+}
+
+
+.device-phone {
+	
+	position: relative;
+
+	img {
+		position: relative;
+		object-fit: contain;
+		overflow: hidden;
+		border-style: none;
+	}
+
+	img.screen {
+		position: absolute;
+		top: 2.5%;
+		left: 8%;
+		width: 84.2%;
+		height: 92.8%;
+		border-radius: 5%;
+		background-color: white;
+	}
+
 }
