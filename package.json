@@ -33,6 +33,7 @@
     "gulp-purgecss": "^3.0.0",
     "gulp-responsive": "^3.0.1",
     "gulp-sass": "^4.1.0",
+    "gulp-sitemap": "^7.6.0",
     "gulp-sourcemaps": "^2.6.5",
     "popper.js": "^1.16.1",
     "rollup": "^2.28.2",

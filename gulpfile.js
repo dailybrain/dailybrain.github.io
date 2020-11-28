@@ -17,6 +17,7 @@ const commonjs = require('rollup-plugin-commonjs')
 const terser = require('rollup-plugin-terser').terser
 
 const responsive = require('gulp-responsive')
+const sitemap = require('gulp-sitemap')
 
 const browserSync = require('browser-sync').create()
 
@@ -32,6 +33,17 @@ const html = () => {
     .pipe(gulpIf(isProd, htmlmin({
         collapseWhitespace: true
     })))
+    .pipe(gulp.dest('docs'))
+}
+
+const sitemapXml = () => {
+    return gulp
+    .src('src/pages/**/*.html', {
+        read: false
+    })
+    .pipe(sitemap({
+        siteUrl: 'https://dailybrain.fr'
+    }))
     .pipe(gulp.dest('docs'))
 }
 
@@ -199,5 +211,5 @@ exports.html = html
 exports.css = css
 exports.js = js
 exports.del = del
-exports.serve = gulp.parallel(html, assets, images, css, js, watchFiles, serve)
-exports.default = gulp.series(del, html, assets, images, css, js)
+exports.serve = gulp.parallel(html, sitemapXml, assets, images, css, js, watchFiles, serve)
+exports.default = gulp.series(del, html, sitemapXml, assets, images, css, js)
