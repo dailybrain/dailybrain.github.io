@@ -22,19 +22,19 @@
         .carousel-item {
         
             @media (max-width: 768px) {
-                min-height: 460px;
+                min-height: 480px;
             }
     
             @media (min-width: 768px) {
-                min-height: 305px;
+                min-height: 310px;
             }
         
             @media (min-width: 1024px) {
-                min-height: 280px;
+                min-height: 290px;
             }
         
             @media (min-width: 1280px) {
-                min-height: 255px;
+                min-height: 260px;
             }
     
             .avatar {
