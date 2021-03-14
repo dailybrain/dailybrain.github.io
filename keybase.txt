@@ -1,0 +1,75 @@
+==================================================================
+https://keybase.io/vspiewak
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://dailybrain.fr
+  * I am vspiewak (https://keybase.io/vspiewak) on keybase.
+  * I have a public key with fingerprint 4A87 31EB C997 8CD5 A62D  7D54 7FC3 AD73 F074 316C
+
+To do so, I am signing this object:
+
+{
+  "body": {
+    "key": {
+      "eldest_kid": "0120e10cbfbbd6c3c7fef6d4de77f3ada9fd84f292d9d275552878a2927fe6fcf8bf0a",
+      "fingerprint": "4a8731ebc9978cd5a62d7d547fc3ad73f074316c",
+      "host": "keybase.io",
+      "key_id": "7fc3ad73f074316c",
+      "kid": "0101a01b933693bb60bfa3133db34b9feecfe759057f476524bee8d03f6ef3c00bd60a",
+      "uid": "34afce691d1ccfbbf18a4e5580369c19",
+      "username": "vspiewak"
+    },
+    "service": {
+      "hostname": "dailybrain.fr",
+      "protocol": "https:"
+    },
+    "type": "web_service_binding",
+    "version": 1
+  },
+  "ctime": 1572570901,
+  "expire_in": 157680000,
+  "prev": "fc457d17799124d6acf0cd363533c6d5f41df813413a34434b305c53dec201ee",
+  "seqno": 20,
+  "tag": "signature"
+}
+
+which yields the signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v2.1.3
+Comment: https://keybase.io/crypto
+
+yMNxAnicbZJ/TFVlGMcvEkogAf4AtBB2wBoFeN7znh/33OkWJZhLobANIw3OeX/A
+8V7uudxz+S0TEBVt0ERJbArZxVX+qIEhhdXkR2wEajKzZEu6G7BlmIl/qFSzc5n+
+1/vPu+d5v9/P+zzPnsGwQEtIwK6Bs8ZfHuAIGOk7WmLZfmHf8ipG1XEFY6ti7GT+
+Ig5MDE+eXcOMjWEBxxLAIpWqKhYRRBIlVMQ8JpJEoYIVmWIrTzmZwzLmJEEQOKtk
+VczYFIoUUatKWYVJZqjmLCBul1tzekwsr1glCIiKZFmyIiwoIoclLPASRSZUgpSV
+eAhEZBoLdcPvMItTFYOkarqZM4O8+fL+R/+kbhYoLFBlCEUZqqrIqlSBAEKsQl6V
+KSGIEkmQWUGivCQKHK8SYsUspCKhELGs2e183SXzOMgrFBFRBhggZI6CAqvCE0Gw
+siYeAdkvNIjbqRQRU11quDRSptiZ6mTGzJZqiPgH6+/ksQIrmqNCdSuaM5W6TbPL
+rXt0pDvMp0KPx2XY/FZPhcuvLSNq3mNKnqo5sTlI01FK3IamOxkbMJXIo/mxQJA4
+QWJlFiQzpNyluUme5pxPi1bWPP5/SKmJpIgXJAwkSZYBx2NRQZRFGIpQgBCJWKA8
+wNQKIA+gAnnenBhkBSRATBDHAkIYf1/FTp2xcSbUoxSYTEMrcCqeEjdhqvv7tj1l
+CQixLAxa4N8wS8jTEU/2LnMyfC4w1Pt+e9wNw+ZoHpn6+PUGS3HraO4rK9fXL8i+
+XjF8WZooCj6QeKizYWYg1btryrLKuxTlDNTH9Ezv6d6XMvRqSdzR7P0T0cMzubFp
+RmTYztPnszbP3QnbuvbIALo1MpDz2sq2Ks42829kfWVY8zrLw/RLV2aXRfQWtwQf
+/sfX77huEbKy+rl3qtW57Y2Dm0L3vuuNXtzliwmN7h3S09uG68rHyxvvHxzKXdHa
+fS49M3EiKTfo9xTvD2ej6k42B3U0tvnIp5v6lmz+KaN0Nq/g58PgXItwhZ759rhd
+bwr+oOpO0Phvq2sfHfNNx3d+3xdNhideWnOtMdlRv/SyvTPoS2Y25A3LloSrkYPH
+Ev7EO+5Orp4p3/Ce415kwu6/V7UMZo4vX9JTW3rh+RfAH2kjW32zsydONVQupMNh
+AXqavtElx6ek3Qqu8s3cRvqKhNq1i+GL+ewvvYuaLrVXxpxvn0wLX3Yiq+C5uFPM
+xhhji/erQ/Ef3gN6F4hLql/EZcydjFrz1s0IuWnKXhzSdtyb86DswZ7T9Y/2346p
+mf1Ij6xtmMyPHd49Fj4680VN3IbcT/KV6h1JqKrf7oqdzgfyzbcPGBHPMGJq0cNv
+3lQdtS9nZx35OvvutozPr96fO9NRMhplRKwbC/zxRsd3BwMrrwV1J17sMVwXu/a2
+1tX4ni3MHlvwq2tnyGf/AcRmuqI=
+=5rpC
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/vspiewak
+
+==================================================================

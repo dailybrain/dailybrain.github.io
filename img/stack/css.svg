@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.1"
+   id="Layer_1"
+   x="0px"
+   y="0px"
+   width="433.57999"
+   height="491.728"
+   viewBox="85.5 210.272 433.57998 491.728"
+   enable-background="new 85.5 210.272 437.29 491.728"
+   xml:space="preserve"
+   sodipodi:docname="css.svg"
+   inkscape:version="1.0.2 (e86c870879, 2021-01-15)"><metadata
+   id="metadata15"><rdf:RDF><cc:Work
+       rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
+         rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title>CSS3 Logo</dc:title></cc:Work></rdf:RDF></metadata><defs
+   id="defs13" /><sodipodi:namedview
+   pagecolor="#ffffff"
+   bordercolor="#666666"
+   borderopacity="1"
+   objecttolerance="10"
+   gridtolerance="10"
+   guidetolerance="10"
+   inkscape:pageopacity="0"
+   inkscape:pageshadow="2"
+   inkscape:window-width="830"
+   inkscape:window-height="480"
+   id="namedview11"
+   showgrid="false"
+   fit-margin-top="0"
+   fit-margin-left="0"
+   fit-margin-right="0"
+   fit-margin-bottom="0"
+   inkscape:zoom="1.6370839"
+   inkscape:cx="335.57635"
+   inkscape:cy="-193.94241"
+   inkscape:window-x="0"
+   inkscape:window-y="27"
+   inkscape:window-maximized="0"
+   inkscape:current-layer="Layer_1" />
+<title
+   id="title2">CSS3 Logo</title>
+<polygon
+   fill="#1572b6"
+   points="305.735,702 128.668,652.845 89.21,210.272 522.79,210.272 483.29,652.775 "
+   id="polygon4"
+   transform="translate(-3.71)" />
+<polygon
+   fill="#33a9dc"
+   points="306,664.375 449.474,624.599 483.229,246.459 306,246.459 "
+   id="polygon6"
+   transform="translate(-3.71)" />
+<path
+   fill="#ffffff"
+   d="m 164.029,293.569 -0.308,54.766 H 386.63 l -0.08,35.375 H 163.493 l -0.161,54.766 h 222.909 l -0.293,62.462 -84.061,29.75 -83.639,-29.75 0.063,-27.087 h -54.765 l -0.251,65.719 138.353,49.289 138.877,-49.289 0.467,-98.873 0.141,-19.834 0.568,-127.292 z"
+   id="path8" />
+</svg>
