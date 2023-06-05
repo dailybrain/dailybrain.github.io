@@ -1,0 +1,7 @@
+User-Agent: *
+
+# Do not index
+Disallow: /wall.html
+
+# Sitemap
+Sitemap: /sitemap.xml
